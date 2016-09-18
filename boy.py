@@ -5,7 +5,7 @@ from umbrella import Umbrella
 
 class Boy:
     """
-        This class represents the main party of the body in study
+    This class represents the main party of the body in study
     """
     def __init__(self, actor, positionX, positionY,mass, speed, umbrella, gravity=100):
         self.actor = actor
@@ -27,7 +27,6 @@ class Boy:
         self.acceleration = -(resist - self.mass * self.gravity) / self.total_mass
         self.speed += self.acceleration * dt
 
-        print (self.speed)
         if self.positionY > 20:
             self.positionY -= self.speed * dt
             self.umbrella.positionY = self.positionY + 20

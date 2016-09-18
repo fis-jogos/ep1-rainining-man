@@ -13,14 +13,21 @@ def update(dt):
 
 # Simulacao
 WIDTH = World.WIDTH = 400
-HEIGHT = World.HEIGHT = 900
+HEIGHT = World.HEIGHT = 600
 
 world = World(gravity=50)
 boyStartX = World.WIDTH/2
 boyStartY = World.HEIGHT
-umbrella = Umbrella(Actor('umbrella'),positionX=boyStartX, positionY=boyStartY)
-boy = Boy(Actor('1'), positionX=boyStartX,positionY=boyStartY, mass=100,
- speed=0, gravity=world.gravity,umbrella=umbrella)
+umbrella = Umbrella(Actor('umbrella'),positionX=200, positionY=450)
+boy = Boy(
+    Actor('1'),
+    positionX=boyStartX,
+    positionY=boyStartY,
+    mass=100,
+    speed=0,
+    gravity=world.gravity,
+    umbrella=umbrella
+)
 
 def on_mouse_down():
     boy.k = 10
@@ -30,5 +37,4 @@ def on_mouse_up():
     boy.k = 1.05
     boy.actor.image = '1'
 
-world.add(umbrella)
 world.add(boy)
