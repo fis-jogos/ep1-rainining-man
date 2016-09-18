@@ -9,7 +9,7 @@ class Umbrella:
     def draw(self):
         self.actor.x = self.positionX
         self.actor.y = 600 - self.positionY
-        #self.actor.draw()
+        self.actor.draw()
 
     def update(self, dt):
         pass

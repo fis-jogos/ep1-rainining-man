@@ -1,10 +1,11 @@
 import sys; sys.path.append('.')
-from world import World
 from boy import Boy
 from umbrella import Umbrella
+from world import World
 
 
 def draw():
+    screen.blit('background', pos=(0, 0))
     world.draw()
 
 def update(dt):
