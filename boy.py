@@ -23,8 +23,8 @@ class Boy:
         self.k = 1.05
 
     def update(self, dt):
-        resist = self.k * (self.speed ** 2)
-        self.acceleration = -(resist - self.mass * self.gravity) / self.total_mass
+        drag = self.k * (self.speed ** 2)
+        self.acceleration = -(drag - self.mass * self.gravity) / self.total_mass
         self.speed += self.acceleration * dt
 
         if self.positionY > 20:
