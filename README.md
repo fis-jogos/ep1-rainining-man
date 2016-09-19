@@ -1,3 +1,5 @@
+Students: Tiago Assunção, Gustavo Lopes
+
 # Raining-Man
 A game written in python about a boy in free fall with a umbrellas.
 
