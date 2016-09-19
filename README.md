@@ -3,8 +3,8 @@ A game written in python about a boy in free fall with a umbrellas.
 
 ## Objective
 While the boy is in free fall, the player needs to avoid the
-obstacles. The boy hava an umbrella with can be used for a little
-time to break the free fall.
+obstacles. The boy has an umbrella that can be used for a little
+time to slow down.
 
 ![Raining Main img](https://raw.githubusercontent.com/TiagoAssuncao/raining-man/adding_hooks/images/firstversion.png)
 
