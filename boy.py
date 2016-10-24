@@ -16,7 +16,5 @@ class Boy:
         pos_y -= speed_y * 1/60
         self.body.vel = (speed_x, speed_y)
 
-        print (self.body.vel[1])
-
         if(self.body.pos[1] < 35):
             self.body.vel = (0, 0)
