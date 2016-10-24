@@ -1,41 +1,30 @@
-import sys; sys.path.append('.')
-from boy import Boy
-from umbrella import Umbrella
-from world import World
+from FGAme import *
+from math import sqrt
+from boy import *
+
+world.add.margin(10, -10)
+world.gravity = (0, -10)
+player = Boy()
+player.body.gravity = world.gravity
+gravity_x, gravity_y = player.body.gravity
+
+@listen('long-press', 'up')
+def increase_drag():
+    player.k = 10
+
+@listen('key-up', 'up')
+def decrease_drag():
+    player.k = 1.05
 
 
-def draw():
-    screen.blit('background', pos=(0, 0))
-    world.draw()
+@listen('key-down', 'x')
+def exit_game():
+    exit()
 
-def update(dt):
-    screen.clear()
-    world.update(dt)
+def update():
+    player.update()
 
-# Simulacao
-WIDTH = World.WIDTH = 400
-HEIGHT = World.HEIGHT = 600
+#world.add(player)
 
-world = World(gravity=50)
-boyStartX = World.WIDTH/2
-boyStartY = World.HEIGHT
-umbrella = Umbrella(Actor('umbrella'),positionX=200, positionY=450)
-boy = Boy(
-    Actor('1'),
-    positionX=boyStartX,
-    positionY=boyStartY,
-    mass=100,
-    speed=0,
-    gravity=world.gravity,
-    umbrella=umbrella
-)
 
-def on_mouse_down():
-    boy.k = 10
-    boy.actor.image = '2'
-
-def on_mouse_up():
-    boy.k = 1.05
-    boy.actor.image = '1'
-
-world.add(boy)
+run()
