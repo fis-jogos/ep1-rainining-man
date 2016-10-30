@@ -8,11 +8,14 @@ While the boy is in free fall, the player needs to avoid the
 obstacles. The boy has an umbrella that can be used for a little
 time to slow down.
 
-![Raining Main img](https://raw.githubusercontent.com/TiagoAssuncao/raining-man/adding_hooks/images/firstversion.png)
+Actual Version of the game using FGAme
+
+![Raining Main img](https://raw.githubusercontent.com/TiagoAssuncao/raining-man/master/images/jogo.png)
 
 ## Technology Stack
 * Python 3.5
-* PyGameZero 1.1
+* pygame
+* FGAme
 
 ## Installation Guide
 First, you need install python in your system
@@ -27,10 +30,12 @@ After, you need install the [Pip](https://pypi.python.org/pypi/pip)
 
 ***
 
-Finally, you can install the [PyGameZero](http://pygame-zero.readthedocs.io/en/latest/)
-and clone the repository:
+Then, install pygame:
+	`sudo apt-get install python-pygame`
 
-`pip install pygamezero`
+Finally, you can install the [FGAme] and clone the repository:
+
+`pip3 install FGAme --user`
 
 `git clone https://github.com/TiagoAssuncao/raining-man`
 
@@ -40,4 +45,4 @@ So, you just need into in the dir and run:
 
 `cd raining-main`
 
-`pgzrun run.py`
+`python3 run.py`
