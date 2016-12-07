@@ -45,4 +45,9 @@ So, you just need into in the dir and run:
 
 `cd raining-main`
 
-`python3 run.py`
+`python3 setup.py install --user`
+
+
+Now you have the bin, so:
+
+`raining_man`
